@@ -1,57 +1,55 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $(window).scroll(function(){
-        let winTop = $(window).scrollTop()
-        let wavee = $(".waves").offset().top
-        if(winTop>=wavee){
-
-
-        }else{
+    $(".header").on("wheel DOMMouseScroll", function (event) {
+        //    console.log(event)
+        let E = event.originalEvent
+        let delta = 0;
+        if (E.detail) {
+            delta = E.detail * -40
+        } else {
+            delta = E.wheelDelta
         }
-})
 
-    $(".btnTop").click(function(){
-        moveScroll({
-        top:0,
-        speed:2000
-        })
+        if (delta < 0) {
+            //마우스 휠을 내렸을 때
+            if ($(this).next().length) {
+                let posTop = $(this).next().offset().top
+                $("html,body").stop().animate({ scrollTop: posTop }, 1000)
+            }
+        } else {
+            //마우스 휠을 올렸을 때
+            if ($(this).prev().length != 0) {
+                // let posTop = $(this).prev().offset().top
+                // $("html,body").stop().animate({ scrollTop: posTop }, 1000)
+            }
+        }
+        return false
     })
 
-    function moveScroll(option){
-        $("html,body").animate({scrollTop:option.top},option.speed)  
-    }
-    
-
-    // $(".tabmenu .tab>li").click(function(){
-    //     $(".tabmenu .tab>li").removeClass("on")
-    //     $(".tabmenu .tab>li").addClass("on")
-
-    //     $(".bannerImg .train>li").removeClass("on")
-    //     $(".bannerImg .train>li").eq(count).addClass("on")
-    // })
-
-    $(".bannerbtn .prevbtn").click(function(){
-        
-        $(".bannerImg .train>li").removeClass("on")
-        $(".bannerImg .train>li").eq(count).addClass("on")
-    })
-
-    $(".bannerbtn .nextbtn").click(function(){
-        $(".bannerImg .train>li").removeClass("on")
-        $(".bannerImg .train>li").eq(count).addClass("on")
-    })
-
-
-     $(window).scroll(function(){
-        let winSCT = $(window).scrollTop()
-        console.log(winSCT)
-        if(winSCT>400){
-            // alert("400이상 아래로 스크롤해서 내려왔습니다.")
-            $("body").addClass("dark")
-        }else{
-             $("body").removeClass("dark")
+    $(window).scroll(function () {
+        let winscroll = $(window).scrollTop()
+        if (winscroll > 200) {
+            $(".fixedDecoWave").addClass("pos1")
+        } else {
+            $(".fixedDecoWave").removeClass("pos1")
         }
     })
+
+    $(".popupList>li").click(function (e) {
+        e.preventDefault()
+        $(".popuppopup").addClass("on")
+        let idx = $(this).index()
+        //일단 싹다 지우고 순번에 맞는 리스트만 보이게끔.
+        $(".detailpopup>li").removeClass("on")
+        $(".detailpopup>li").eq(idx).addClass("on")
+    })
+
+    $(".btnPopupClose").click(function (e) {
+        e.preventDefault()
+        $(".popuppopup").removeClass("on")
+    })
+
+
 })
 
 
