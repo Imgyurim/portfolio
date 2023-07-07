@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    let count = 0
+    (".tab>li").click(function(e){
+        e.preventDefault()
+
+
+        
+    })
+
+
+
+
 
     $(".header").on("wheel DOMMouseScroll", function (event) {
         //    console.log(event)
@@ -58,7 +69,7 @@ $(document).ready(function () {
     nextbtn.addEventListener(`click`,function(e){
         e.preventDefault()
         count++
-        if(count>7){count=0}
+        if(count>3){count=0}
         train.style.transform = `translateX(-${25*count}%)`
         for(let i=0; i<trainList.length; i++){
             trainList[i].classList.remove(`on`)
@@ -68,7 +79,7 @@ $(document).ready(function () {
     prevbtn.addEventListener(`click`,function(e){
         e.preventDefault()
         count--
-        if(count<0){count=7}
+        if(count<0){count=3}
         train.style.transform = `translateX(-${25*count}%)`
         for(let i=0; i<trainList.length; i++){
             trainList[i].classList.remove(`on`)
@@ -77,21 +88,14 @@ $(document).ready(function () {
     })
     
        // $(".skill_List>li circle")
-    let pathLength = $(".c1").get(0).getTotalLength()
-       // alert(pathLength)
-       // 314 - (314*0.9) 
-    pathLength - (pathLength*0.9)
-    $(".c1").css("stroke-dashoffset",pathLength - (pathLength*0.9))
+    // let pathLength = $(".c1").get(0).getTotalLength()
+    //    // alert(pathLength)
+    //    // 314 - (314*0.9) 
+    // pathLength - (pathLength*0.9)
+    // $(".c1").css("stroke-dashoffset",pathLength - (pathLength*0.9))
 
 
-    	
-	// $('a.scroll-link').click(function(e){
-	// 	e.preventDefault();
-	// 	$id = $(this).attr('href');
-	// 	$('body,html').animate({
-	// 		scrollTop: $($id).offset().top -20
-	// 	}, 750);
-	// });
+
 })
 
 
