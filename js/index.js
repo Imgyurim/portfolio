@@ -18,10 +18,10 @@ $(document).ready(function () {
             }
         } else {
             //마우스 휠을 올렸을 때
-            if ($(this).prev().length != 0) {
-                // let posTop = $(this).prev().offset().top
-                // $("html,body").stop().animate({ scrollTop: posTop }, 1000)
-            }
+            // if ($(this).prev().length != 0) {
+            //     let posTop = $(this).prev().offset().top
+            //     $("html,body").stop().animate({ scrollTop: posTop }, 1000)
+            // }
         }
         return false
     })
@@ -49,6 +49,20 @@ $(document).ready(function () {
         $(".popuppopup").removeClass("on")
     })
 
+    $(".tab>li").click(function(e){
+        e.preventDefault()
+        $(".bannerImg").addClass("on")
+        let idx =$(this).index()
+        $(".train>li").removeClass("on")
+        $(".train>li").eq(idx).addClass("on")
+    })
+
+       // $(".skill_List>li circle")
+       let pathLength = $(".c1").get(0).getTotalLength()
+       // alert(pathLength)
+       // 314 - (314*0.9) 
+       pathLength - (pathLength*0.9)
+       $(".c1").css("stroke-dashoffset",pathLength - (pathLength*0.9))
 
 })
 

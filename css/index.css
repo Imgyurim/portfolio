@@ -1,3 +1,4 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
@@ -37,79 +38,7 @@ b {
 .wrap {
     font-family: 'Noto Sans KR', sans-serif;
 }
-
-
-.btnTop {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    background: #a4aff7;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-#cursor {
-    position: absolute;
-    z-index: 10000000000000;
-    transform: translate(10%, 10%);
-    background: url(../img/mouse/orange.png);
-    background-size: contain;
-    width: 80px;
-    height: 80px;
-    pointer-events: none;
-}
-
-
-
-
-.header {
-    position: relative;
-    background: #1b1f42;
-    width: 100%;
-    height: 100vh;
-}
-
-.inner-header {
-    height: 75vh;
-    width: 100%;
-}
-
-.inner-header .title {
-    padding-top: 200px;
-    width: 1000px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.inner-header .title p {
-    text-align: left;
-    color: #fbe4b8;
-    text-transform: uppercase;
-    font-size: 25px;
-    font-weight: 200;
-}
-
-.wave {
-    position: absolute;
-    left: 0;
-    top: 94%;
-}
-
-.waves {
-    position: relative;
-    width: 100%;
-    height: 28vh;
-    margin-bottom: -7px;
-    min-height: 100px;
-    max-height: 240px;
-}
-
-/* Animation */
+/* 물결 Animation */
 .parallax>use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -144,18 +73,6 @@ b {
     }
 }
 
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-    .waves {
-        /* height:40px;
-    min-height:40px; */
-    }
-
-    .title {
-        /* font-size:24px; */
-    }
-}
-
 .fixedDecoWave {
     position: fixed;
     left: 0;
@@ -185,34 +102,114 @@ b {
     transform: scaleY(1.5);
 }
 
-/* main */
-main {
-    width: 100%;
-    margin: 0 auto;
+/* top */
+.btnTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: #a4aff7;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* 마우스커서 */
+#cursor {
+    position: absolute;
+    z-index: 10000000000000;
+    transform: translate(10%, 10%);
+    background: url(../img/mouse/orange.png);
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
 }
 
-/* main-about */
+.grid {
+    background-size: 30px 30px;
+    background-image: linear-gradient(90deg, #000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px), linear-gradient(#000 1px, transparent 1px), linear-gradient(#000 1px, transparent 1px);
+}
+
+/* header */
+.header {
+    position: relative;
+    background: #1b1f42;
+    width: 100%;
+    height: 100vh;
+}
+
+.inner-header {
+    height: 75vh;
+    width: 100%;
+}
+
+.inner-header .title {
+    padding-top: 200px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.inner-header .title p {
+    text-align: left;
+    color: #fbe4b8;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 10px
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    top: 94%;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 28vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 240px;
+}
+
+
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        /* height:40px;
+    min-height:40px; */
+    }
+
+    .title {
+        /* font-size:24px; */
+    }
+}
+
+
+
+/*aboutTop*/
 .aboutT {
     background: #ffdfb0;
     height: 100%;
     width: 84%;
     margin: 0 auto;
     border-radius: 20px 20px 0 0;
+    margin-top: 220px;
     box-shadow: 4px 3px 22px #80808030;
 }
 
-.grid {
-    padding-top: 220px;
-    background-size: 30px 30px;
-    background-image: linear-gradient(90deg, #000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px), linear-gradient(#000 1px, transparent 1px), linear-gradient(#000 1px, transparent 1px);
-}
-
-.Stitle>ul {
+.about_list>ul {
     display: flex;
     justify-content: space-between;
 }
 
-.Stitle>ul>li {
+.about_list>ul>li {
     padding-top: 25px;
     padding-bottom: 55px;
     font-size: 23px;
@@ -230,7 +227,9 @@ main {
     width: 50%;
     padding-left: 20px;
 }
-
+.about_topL img{
+    width: 100%;
+}
 .about_topR {
     border-top: 1px solid #1b1f42;
     width: 50%;
@@ -240,7 +239,7 @@ main {
 
 .about_topR p {
     font-size: 18px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     line-height: 140%;
     font-weight: 400;
@@ -258,15 +257,6 @@ main {
 }
 
 .about_mid .cls-1 {
-    fill: #1b1f42;
-}
-
-.about_midL {
-    fill: #1b1f42;
-    padding-left: 10px;
-}
-
-.about_midR {
     fill: #1b1f42;
 }
 
@@ -300,7 +290,6 @@ main {
     width: 200px;
     flex-shrink: 0;
 }
-
 .about_bot>ul>li>ul>li {
     font-size: 19px;
     padding-bottom: 10px;
@@ -314,11 +303,19 @@ main {
 .aboutlist>ul>li {
     font-size: 20px;
 }
-
+.aboutbot_list{
+    font-size: 20px;
+    font-weight: bold;
+}
+.aboutbot_list span{
+    padding-left:20px;
+    font-size: 19px;
+    font-weight: 400;
+}
 .about_bot>ul>li>h4+* {
     flex-grow: 1;
 }
-
+/* about bottom */
 .aboutB {
     height: 60vh;
     width: 84%;
@@ -327,7 +324,6 @@ main {
     border-radius: 0 0 20px 20px;
     margin-bottom: 15px;
 }
-
 .skills h4 {
     font-size: 20px;
     font-weight: bold;
@@ -386,11 +382,11 @@ main {
 
 .popup>h1 {
     position: absolute;
-    left: 319px;
-    top: 17px;
+    left: 279px;
+    top: 58px;
     text-transform: uppercase;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .popup>h1 span {
@@ -412,7 +408,7 @@ main {
 .popupImg {
     position: absolute;
     left: 50%;
-    top: 47%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 1400px;
 }
@@ -460,7 +456,6 @@ main {
 }
 
 .popuppopup {
-    border: 1px solid red;
     width: 1200px;
     height: 600px;
     position: fixed;
@@ -472,6 +467,7 @@ main {
     padding: 20px;
     padding-bottom: 50px;
     display: none;
+    border: 4px solid black;
 }
 
 .popuppopup.on {
@@ -479,7 +475,6 @@ main {
 }
 
 .detailpopup {
-    border: 1px solid blue;
     position: relative;
     width: 100%;
     height: 100%;
@@ -510,7 +505,6 @@ main {
     text-align: right;
     display: block;
     padding: 20px 40px;
-    border: 1px solid red;
     position: absolute;
     right: 0;
     top: 0;
@@ -518,6 +512,8 @@ main {
     background: #fff;
     border-radius: 33px 33px 0 0;
     text-transform: uppercase;
+    border: 4px solid black;
+    border-bottom: none;
 }
 
 .popuppopup .popuppopupcolor {
@@ -644,17 +640,16 @@ main {
 
 /* banner */
 .banner {
-    margin-top: 52px;
+    width: 100%;
     height: 100vh;
     position: relative;
+    padding-top: 94px;
 }
 
 .bannerbox {
-    width: 1591PX;
-    position: absolute;
-    height: 856px;
-    left: 150px;
-    top: 95px;
+    width: 84%;
+    height: 91%;
+    margin: 0 auto;
 }
 
 .bannerbox img {
@@ -664,32 +659,36 @@ main {
 
 .banner>h1 {
     position: absolute;
-    left: 294px;
-    top: 109px;
+    left: 320px;
+    top: 116px;
+    font-size: 2rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .banner>h1 span {
-    font-size: 2.5rem;
     padding-right: 10px;
-    ;
 }
 
 .bannerImg {
-    height: 400px;
+      left: 0%;
+      top: 21%;
+      /* transform: translate(-50%,-50%); */
+      width: 400%;
+      position: absolute;
 }
 
 .bannerImg>ul {
-    position: relative;
     display: flex;
 }
 
 .bannerImg>ul>li {
+    width: 1594px;
+    margin: 0 auto;
+    height: 410px;
     position: absolute;
-    left: 49%;
-    top: 200px;
-    transform: translateX(-49%);
-    width: 1593px;
+    left: 2%;
+    top: 0;
 }
 
 .bannerImg>ul>li img {
@@ -699,17 +698,14 @@ main {
 }
 
 .bannerImg>ul>li>ul {
-    width: 58%;
-    margin: 44px auto;
-    height: 190px;
+   display: flex;
 }
 
 .tabmenu {
     position: absolute;
-    left: 151px;
-    top: 42px;
+    left: 150px;
+    top: 41px;
 }
-
 .tab {
     display: flex;
 }
@@ -730,28 +726,29 @@ main {
 
 .bannerbtn {
     position: absolute;
-    left: 178px;
-    top: 124px;
+    left: 150px;
+    top: 95px;
 }
 
 .prevbtn {
-    border: 1px solid red;
-    padding: 25px 8px;
-    margin: 0 -19px;
+    padding: 39px 33px;
+    font-size: 0;
+    display: inline-block;
 }
 
 .nextbtn {
-    border: 1px solid red;
-    padding: 25px 8px;
-    margin: 0px 24px;
-}
+    padding: 39px 33px;
+    font-size: 0;
+    display: inline-block;
 
+}
+/* .redesign */
 .redesign {
     width: 100%;
     height: 100%;
     position: relative;
-    margin-top: 152px;
-    padding-bottom: 152px;
+    margin-top: 37px;
+    margin-bottom: 123px;
 }
 
 .redesignbox {
@@ -770,7 +767,7 @@ main {
     left: 234px;
     top: 53px;
     font-size: 25px;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 .hongkongmain {
@@ -844,11 +841,6 @@ main {
     object-fit: contain;
 }
 
-.contact {
-    width: 100%;
-    height: 100vh;
-    background: #1b1f42;
-}
 
 .redesign a {
     position: absolute;
@@ -861,9 +853,31 @@ main {
     text-align: center;
     line-height: 30px;
 }
+/* contact */
+.contact {
+    width: 100%;
+    height: 100vh;
+    background: #1b1f42;
+}
 
 .contactbox {
-    padding: 188px 0;
     text-align: center;
-
+}
+.contactbox > .con_list{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+}
+.con_list>ul{
+    display: flex;
+}
+.con_list>ul>li{
+    width: 100px;
+    height: 100px;
+}
+.con_list>ul>li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
