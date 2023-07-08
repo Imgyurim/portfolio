@@ -1,17 +1,22 @@
 $(document).ready(function () {
-    let count = 0
-    (".tab>li").click(function(e){
+
+    const bannerImg = new Swiper(".bannerImg", {
+        navigation: {
+            nextEl: ".nextbtn",
+            prevEl: ".prevbtn",
+          },
+    });
+
+    $(".tab>li").click(function(e){
         e.preventDefault()
+        $(".swiper-wrapper").addClass("on")
+        let idx = $(this).index()
+        $("swiper-wrapper>li").removeClass("on")
+        $("swiper-wrapper>li").eq(idx).addClass("on")
+        bannerImg.slideToLoop(idx,500)
 
-
-        
     })
-
-
-
-
-
-    $(".header").on("wheel DOMMouseScroll", function (event) {
+    $(".grid>div").on("wheel DOMMouseScroll", function (event) {
         //    console.log(event)
         let E = event.originalEvent
         let delta = 0;
@@ -23,16 +28,17 @@ $(document).ready(function () {
 
         if (delta < 0) {
             //마우스 휠을 내렸을 때
-            if ($(this).next().length) {
+            if ($(this).next().length!=0) {
                 let posTop = $(this).next().offset().top
-                $("html,body").stop().animate({ scrollTop: posTop }, 1000)
+                $("html,body").stop().animate({scrollTop: posTop}, 1000)
+                // console.log(posTop)
             }
         } else {
-            //마우스 휠을 올렸을 때
-            // if ($(this).prev().length != 0) {
-            //     let posTop = $(this).prev().offset().top
-            //     $("html,body").stop().animate({ scrollTop: posTop }, 1000)
-            // }
+            // 마우스 휠을 올렸을 때
+            if ($(this).prev().length!=0) {
+                let posTop = $(this).prev().offset().top
+                $("html,body").stop().animate({ scrollTop: posTop }, 1000)
+            }
         }
         return false
     })
@@ -60,32 +66,32 @@ $(document).ready(function () {
         $(".popuppopup").removeClass("on")
     })
 
-    let nextbtn = document.querySelector(`.nextbtn`)
-    let prevbtn = document.querySelector(`.prevbtn`)
-    let train = document.querySelector(`.train`)
-    let trainList = train.children
+    // let nextbtn = document.querySelector(`.nextbtn`)
+    // let prevbtn = document.querySelector(`.prevbtn`)
+    // let train = document.querySelector(`.train`)
+    // let trainList = train.children
     
-    let count = 0
-    nextbtn.addEventListener(`click`,function(e){
-        e.preventDefault()
-        count++
-        if(count>3){count=0}
-        train.style.transform = `translateX(-${25*count}%)`
-        for(let i=0; i<trainList.length; i++){
-            trainList[i].classList.remove(`on`)
-        }
-        trainList[count].classList.add(`on`)
-    })
-    prevbtn.addEventListener(`click`,function(e){
-        e.preventDefault()
-        count--
-        if(count<0){count=3}
-        train.style.transform = `translateX(-${25*count}%)`
-        for(let i=0; i<trainList.length; i++){
-            trainList[i].classList.remove(`on`)
-        }
-        trainList[count].classList.add(`on`)
-    })
+    // let count = 0
+    // nextbtn.addEventListener(`click`,function(e){
+    //     e.preventDefault()
+    //     count++
+    //     if(count>3){count=0}
+    //     train.style.transform = `translateX(-${25*count}%)`
+    //     for(let i=0; i<trainList.length; i++){
+    //         trainList[i].classList.remove(`on`)
+    //     }
+    //     trainList[count].classList.add(`on`)
+    // })
+    // prevbtn.addEventListener(`click`,function(e){
+    //     e.preventDefault()＝＝
+    //     count--
+    //     if(count<0){count=3}
+    //     train.style.transform = `translateX(-${25*count}%)`
+    //     for(let i=0; i<trainList.length; i++){
+    //         trainList[i].classList.remove(`on`)
+    //     }
+    //     trainList[count].classList.add(`on`)
+    // })
     
        // $(".skill_List>li circle")
     // let pathLength = $(".c1").get(0).getTotalLength()
@@ -95,7 +101,7 @@ $(document).ready(function () {
     // $(".c1").css("stroke-dashoffset",pathLength - (pathLength*0.9))
 
 
-
+    
 })
 
 
