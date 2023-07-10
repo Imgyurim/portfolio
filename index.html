@@ -21,7 +21,8 @@
 />
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    </style>
+
+<script src="https://kit.fontawesome.com/96d9bc1566.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -147,15 +148,15 @@
                     <img src="./img/img/likeawave.png" alt="likeawave">
                 </div>
                 <div class="about_topR">
-                    <p>제가 생각하는 좋은디자인은 언제나 기본에 충실한 디자인이라고<br>
-                        생각합니다. 디자인을 처음 접해보면서 이런 저런 어려운 일들이 많았습니다.</p>
-
-                    <p>
-                        막상 멋있을 것 같다 라는 디자인을 만들어 보았을 때 생각보다 결과가<br>
-                        좋지 않은 적도 있었고,<br>
-                        그리고 생각보다 디자인이 예쁘게 잘될 때도 있었습니다. <br>
-                        그런데 디자인의 기본이라고 생각되는 부분을 잘 지킨다면
+                    <p>디자인을 처음 접해보면서 이런 저런 어려운 일들이 많았습니다. <br>
+                        멋있을 것 같다 라는 디자인을 만들어보았을 때 생각보다 결과가<br>
+                        좋지 않은 적도 있었고, 생각보다 디자인이 예쁘게 잘될 때도 있었습니다.
                     </p>
+                    <P>제가 생각하는 좋은 디자인은 언제나 기본에 충실한 디자인이라고 생각합니다.<br>
+                        디자인의 기본이라고 생각되는 부분을 잘 지키며 모든 사람들이 사용하기에<br>
+                        편리하고 흥미로운 사이트를 만들어 좋은 경험을 제공하기 위해서 노력하겠습니다.
+                    </P>
+                   
                 </div>
             </section>
             <section class="about_mid">
@@ -192,8 +193,8 @@
                     <li>
                         <h4>license</h4>
                         <ul>
-                            <li>웹디자인기능사</li>
-                            <li>운전면허2종보통</li>
+                            <li>웹디자인기능사 <span>2023.07</span></li>
+                            <li>운전면허2종보통 <span>2017.00</span></li>
                         </ul>
                     </li>
                     <li>
@@ -215,55 +216,83 @@
         </div>
         <div class="aboutB">
             <div class="circlebox">
+                <div class="arr">
+                    <i class="fa-solid fa-caret-up fa-2xl" style="color: #1d1f3e;"></i>
+                </div>
+                <span class="cir"></span>
+                <span class="circleShadow"></span>
                 <svg viewBox="0 0 120 120">
-                    <circle cx="60" cy="60" r="50" />
+                    <circle class="circle_o" cx="60" cy="60" r="40" />
                 </svg>
-                <span class="per">90</span>
+                <svg class="aa" viewBox="0 0 120 120">
+                    <circle class="circleper" cx="60" cy="60" r="46" />
+                </svg>
+                <span class="circleboxper">0%</span>
             </div>
             <div class="skillList">
                 <ul>
-                    <li>
-                        <img src="./img/skill/html.png" alt="">
+                    <li class="html_d">
+                        <img src="./img/skill/html.png" alt="html">
                         <h3>html</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
-                        <p class="per">80</p>
+                        <p>웹 표준과 접근성을 고려하며 디자인을 보고<br>
+                            웹페이지를 제작할 수 있습니다.</p>
+                        <p class="per">75</p>
                     </li>
-                    <li> 
-                        <img src="./img/skill/css.png" alt="">
+                    <li  class="css_d"> 
+                        <img src="./img/skill/css.png" alt="css">
                         <h3>css</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
-                        <p class="per">40</p>
+                        <p>슬라이드,탭메뉴,애니메이션을 구현할 수 있습니다.</p>
+                        <p class="per">70</p>
                     </li>
-                    <li>
-                        <img src="./img/skill/js.png" alt="">
+                    <li class="javascript_d">
+                        <img src="./img/skill/js.png" alt="javascript">
                         <h3>js</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
+                        <p>기초적인 자바스크립트 사용이 가능합니다.<br>
+                            간단한 동적인 움직임을 제작할수  있습니다</p>
                         <p class="per">60</p>
                     </li>
-                    <li>
-                        <img src="./img/skill/jquery.png" alt="">
+                    <li class="jquery_d">
+                        <img src="./img/skill/jquery.png" alt="jquery">
                         <h3>jquery</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
-                        <p class="per">100</p>
+                        <p>기초적인 제이쿼리 사용이 가능합니다.<br>
+                            간단한 동적인 움직임을 제작할수  있습니다</p>
+                        <p class="per">60</p>
                     </li>
-                    <li>
-                        <img src="./img/skill/photoshop.png" alt="">
+                    <li class="photoshop_d">
+                        <img src="./img/skill/photoshop.png" alt="photoshop">
                         <h3>photoshop</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
-                        <p class="per">100</p>
+                        <p>사진 편집,팝업,배너 등 제작이 가능합니다.</p>
+                        <p class="per">70</p>
                     </li>
-                    <li>
-                        <img src="./img/skill/illustrator.png" alt="">
+                    <li class="illustrator_d"> 
+                        <img src="./img/skill/illustrator.png" alt="illustrator">
                         <h3>illustrator</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto praesentium quam odio magni ut vitae? Enim quis expedita dolorem iusto quos, voluptatibus voluptas ab consequuntur, voluptatem quidem odio amet consectetur.</p>
-                        <p class="per">100</p>
+                        <p>사진 편집,팝업,배너 등 제작이 가능합니다.</p>
+                        <p class="per">70</p>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="popup" >
             <div class="popupbox"><img src="./img/img/windowb.png" alt="보라색윈도우창"></div>
-            <h1><span>01</span>popup design</h1>
+            <h6>
+                <span>0</span>
+                <span>1</span>
+                <span>p</span>
+                <span>o</span>
+                <span>p</span>
+                <span>u</span>
+                <span>p</span>
+                <span>d</span>
+                <span>e</span>
+                <span>s</span>
+                <span>i</span>
+                <span>g</span>
+                <span>n</span>
+                
+            </h6>
+            
+            <p>이미지 <img src="" alt="click!">시 팝업창이 뜹니다.</p>
             <section class="popupImg">
                 <ul class="popupList">
                     <li class="on"><a href="#"><img src="./popup/popup_belly.png" alt="">
@@ -313,11 +342,13 @@
                     <li class="on">
                         <img src="./popup/popup_belly.png" alt="popup_belly">
                         <ul>
-                            <li>색상 <ul class="popuppopupcolor">
+                            <li>색상 
+                                <ul class="popuppopupcolor">
                                     <li class="bellycolor1"></li>
                                     <li class="bellycolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>KCC-간판체</span></li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
                                 repudiandae iure architecto voluptatum tenetur facere sit,
@@ -329,28 +360,29 @@
                         <ul>
                             <li>색상 <ul class="popuppopupcolor">
                                     <li class="blackfridaycolor1"></li>
-                                    <li class="blackfridaycolor1"></li>
+                                    <li class="blackfridaycolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>에스코어 드림</span></li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
-                                repudiandae iure architecto voluptatum tenetur facere sit,
-                                sunt,
-                                impedit totam quisquam dolore hic !</li>
+                            <li>선물상자와 배경에 그라데이션을 주어 입체감이 있도록 표현해주었습니다.
+                            </li>
                         </ul>
                     </li>
                     <li><img src="./popup/popup_christmas.png" alt="">
                         <ul>
                             <li>색상 <ul class="popuppopupcolor">
                                     <li class="christmascolor1"></li>
-                                    <li class="christmascolor1"></li>
+                                    <li class="christmascolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>에스코어 드림</span></li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
-                                repudiandae iure architecto voluptatum tenetur facere sit,
-                                sunt,
-                                impedit totam quisquam dolore hic !</li>
+                            
+                            <li>크리스마스 컨셉에 맞춰 빨강,초록 색을 사용하였고,
+                                산타가 입체적으로 보일 수 있도록 그림자 효과를 넣어주었고,
+                                symbol spayer tool을 이용하여 눈이 내리는 듯한 느낌을 표현해주었습니다. 
+                            </li>
                         </ul>
                     </li>
                     <li><img src="./popup/popup_halloween.png" alt="">
@@ -360,21 +392,7 @@
                                     <li class="halloweencolor2"></li>
                                 </ul>
                             </li>
-                            <li>폰트 </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
-                                repudiandae iure architecto voluptatum tenetur facere sit,
-                                sunt,
-                                impedit totam quisquam dolore hic !</li>
-                        </ul>
-                    </li>
-                    <li><img src="./popup/popup_happy new year.png" alt="">
-                        <ul>
-                            <li>색상 <ul class="popuppopupcolor">
-                                    <li class="HNYcolor1"></li>
-                                    <li class="HNYcolor2"></li>
-                                </ul>
-                            </li>
-                            <li>폰트 <span>에스코어 드림</span></li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
                                 repudiandae iure architecto voluptatum tenetur facere sit,
                                 sunt,
@@ -388,6 +406,7 @@
                                     <li class="hippocolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>비트로 코어TTF<br>에스코어 드림</span></li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
                                 repudiandae iure architecto voluptatum tenetur facere sit,
@@ -402,6 +421,7 @@
                                     <li class="jejucolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>KCC-간판체</span></li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
                                 repudiandae iure architecto voluptatum tenetur facere sit,
@@ -416,7 +436,24 @@
                                     <li class="pathroomcolor2"></li>
                                 </ul>
                             </li>
+                            <li>SIZE <span>500 X 500</span></li>
                             <li>폰트 <span>KCC-간판체</span></li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
+                                repudiandae iure architecto voluptatum tenetur facere sit,
+                                sunt,
+                                impedit totam quisquam dolore hic !</li>
+                        </ul>
+                    </li>
+                    <li><img src="./popup/popup_happy new year.png" alt="">
+                        <ul>
+                            <li>색상 
+                                <ul class="popuppopupcolor">
+                                    <li class="HNYcolor1"></li>
+                                    <li class="HNYcolor2"></li>
+                                </ul>
+                            </li>
+                            <li>SIZE <span>500 X 500</span></li>
+                            <li>폰트 <span>에스코어 드림</span></li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
                                 repudiandae iure architecto voluptatum tenetur facere sit,
                                 sunt,
@@ -434,69 +471,78 @@
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
                         <img src="./banner/primera.png" alt="프리메라 배너">
+                        <h4>프리메라</h4>
                         <ul>
-                            <li >
-                                <h4>프리메라</h4>
+                            <li>
                                 <ul>
-                                    <li>작업기간 <span></span></li>
-                                    <li>color <span></span></li>
-                                    <li>font family <span></span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-                                        ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
-                                        illo voluptatibus? Qui neque,
-                                        velit natus laudantium ducimus eligendi rerum?</li>
+                                    <li>SIZE <span>1920 X 500</span></li>
+                                    <li class="swipercolor">color
+                                        <ul>
+                                            <li class="primeracolor1"></li>
+                                            <li class="primeracolor2"></li>
+                                        </ul>
+                                    </li>
+                                    <li>font <span></span></li>
                                 </ul>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+                                ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
+                                illo voluptatibus? Qui neque,
+                                velit natus laudantium ducimus eligendi rerum?
                             </li>
                         </ul>
                     </li>
                     <li class="swiper-slide">
                         <img src="./banner/ssg.png" alt="쓱배송 배너">
+                        <h4>쓱배송</h4>
                         <ul>
                             <li>
-                                <h4>쓱배송</h4>
                                 <ul>
-                                    <li>작업기간 <span></span></li>
+                                    <li>SIZE <span>1920 X 500</span></li>
                                     <li>color <span></span></li>
-                                    <li>font family <span></span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-                                        ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
-                                        illo voluptatibus? Qui neque,
-                                        velit natus laudantium ducimus eligendi rerum?</li>
+                                    <li>font <span></span></li>
                                 </ul>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+                                ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
+                                illo voluptatibus? Qui neque,
+                                velit natus laudantium ducimus eligendi rerum?
                             </li>
                         </ul>
                     </li>
                     <li class="swiper-slide">
                         <img src="./banner/st.png" alt="카페 배너">
+                        <h4>카페</h4>
                         <ul>
                             <li>
-                                <h4>카페</h4>
                                 <ul>
-                                    <li>작업기간 <span></span></li>
+                                    <li>SIZE <span>1920 X 500</span></li>
                                     <li>color <span></span></li>
                                     <li>font family <span></span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-                                        ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
-                                        illo voluptatibus? Qui neque,
-                                        velit natus laudantium ducimus eligendi rerum?</li>
                                 </ul>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+                                ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
+                                illo voluptatibus? Qui neque,
+                                velit natus laudantium ducimus eligendi rerum?
                             </li>
                         </ul>
                     </li>
                     <li class="swiper-slide">
                         <img src="./banner/BlackfridayBanner.png" alt="블랙프라이데이 배너">
+                        <h4>블랙프라이데이</h4>
                         <ul>
                             <li>
-                                <h4>블랙프라이데이</h4>
                                 <ul>
-                                    <li>작업기간 <span></span></li>
+                                    <li>SIZE <span>1920 X 500</span></li>
                                     <li>color <span></span></li>
                                     <li>font family <span></span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-                                        ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
-                                        illo voluptatibus? Qui neque,
-                                        velit natus laudantium ducimus eligendi rerum?</li>
                                 </ul>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+                                ullam quod eligendi eaque qui pariatur ratione facere tenetur dolor sapiente
+                                illo voluptatibus? Qui neque,
+                                velit natus laudantium ducimus eligendi rerum?
                             </li>
                         </ul>
                     </li>
@@ -504,7 +550,7 @@
             </section>
             <section class="tabmenu">
                 <ul class="tab">
-                    <li class="on"><a href="#">프리메라</a></li>
+                    <li class="on"><a href="#">화장품 브랜드</a></li>
                     <li><a href="#">쓱배송</a></li>
                     <li><a href="#">카페</a></li>
                     <li><a href="#">블랙프라이데이</a></li>
@@ -522,8 +568,9 @@
             </div>
             <div class="redesign_contents">
                 <h3>홍콩다방</h3>
+                <p>기존에 있던 홍콩다방 사이트에서 사용자 입장에서 불편한 점을 찾아 리디자인하였습니다.</p>
                 <ul>
-                    <li>기여도 <span>100%</span></li>
+                    <li>참여도 <span>100%</span></li>
                     <li>색상 <ul>
                             <li class="color1"></li>
                             <li class="color2"></li>
@@ -539,15 +586,28 @@
                         </ul>
                     </li>
                 </ul>
-            </div><a href="#">상세보기</a>
+            </div>
+            <div class="redesign_link">
+                <ul>
+                    <li class="btn1"><a href="https://imgyurim.github.io/redesignpro/">리디자인 사이트<br>바로가기</a></li>
+                    <li class="btn2"><a href="./indexx.html">리디자인 사이트 기획안<br> 바로가기</a></li>
+                    <li class="btn3"><a href="http://www.hongkongdabangkorea.com/">홍콩다방 사이트<br> 바로가기</a></li>
+                </ul>
+            </div>
         </div>
         <div class="contact">
-            <div class="contactbox"><img src="./img/img/thank.png" alt=""></div>
-            <div class="con_list">
+            <div class="contactbox">
+                <img src="./img/img/thank.png" alt="">
+            </div>
+            <div class="con_listT">
                 <ul>
-                    <li><a href="#"><img src="./img/img/QR.png" alt="qr코드"></a></li>
-                    <li><a href="#"><img src="./img/img/github.png" alt="깃허브"></a></li>
-             </ul>
+                    <li><img src="./img/img/phone.png" alt="전화"> 010-2569-1950</li>
+                    <li><img src="./img/img/mail.png" alt="메일"> rdsall123@naver.com</li>
+                </ul>
+            </div>
+            <div class="con_listB">
+                <p>본 페이지는 상업 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+                </ul>
             </div>
         </div>
     </div>

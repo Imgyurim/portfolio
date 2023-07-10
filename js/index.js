@@ -1,5 +1,26 @@
 $(document).ready(function () {
 
+    $(`.skillList>ul>li`).click(function(){
+        let liper = $(this).find(`.per`).text()
+        $(`.circleper`).css(`stroke-dashoffset`,314-(314*(liper*0.01)))
+        let count = 0
+        let timer = setInterval(function(){
+            count++
+            $(`.circleboxper`).text(count+`%`)
+            if(count>=liper){
+                clearInterval(timer)
+            }
+        },10)
+    })
+    // $(`.skillList>ul>li`).mouseout(function(){
+    //     $(`.circlebox svg`).css(`stroke-dashoffset`,314)
+    //     $(`.circleboxper`).text(0+`%`)
+    //     let timer = setInterval(function(){
+    //     },50)
+    //     clearInterval(timer)
+    // })
+
+
     const bannerImg = new Swiper(".bannerImg", {
         navigation: {
             nextEl: ".nextbtn",
@@ -13,8 +34,28 @@ $(document).ready(function () {
         let idx = $(this).index()
         $("swiper-wrapper>li").removeClass("on")
         $("swiper-wrapper>li").eq(idx).addClass("on")
+        $(".tab>li").removeClass("on")
+        $(".tab>li").eq(idx).addClass("on")
         bannerImg.slideToLoop(idx,500)
 
+    })
+    $(".html_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(330deg)`)
+    })
+    $(".css_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(20deg)`)
+    })
+    $(".javascript_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(270deg)`)
+    })
+    $(".jquery_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(90deg)`)
+    })
+    $(".photoshop_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(220deg)`)
+    })
+    $(".illustrator_d").click(function(e){
+        $(`.arr`).css(`transform`,`rotate(140deg)`)
     })
     $(".grid>div").on("wheel DOMMouseScroll", function (event) {
         //    console.log(event)
@@ -103,6 +144,5 @@ $(document).ready(function () {
 
     
 })
-
 
 
