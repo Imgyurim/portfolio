@@ -67,6 +67,14 @@ $(document).ready(function () {
             delta = E.wheelDelta
         }
 
+        if($(this).attr("class")=="redesign"){
+            return
+        }
+        
+        if($(this).attr("class")=="contact"){
+            return
+        }
+
         if (delta < 0) {
             //마우스 휠을 내렸을 때
             if ($(this).next().length!=0) {
